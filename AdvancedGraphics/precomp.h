@@ -9,14 +9,20 @@
 // #define OLDTEMPLATESTYLE
 
 #include <inttypes.h>
+#ifndef ON_A_MAC
 #include "io.h"
+#else
+#include <sys/uio.h>
+#endif
 #include <ios>
 #include <iostream>
 #include <fstream>
 #include <stdio.h>
 #include <vector>
 #include <memory>
+#ifndef ON_A_MAC
 #include <ppl.h>
+#endif
 #include "fcntl.h"
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -31,6 +37,7 @@ using namespace sf;
 #include "RenderObject.h"
 #include "AABB.h"
 #include "Triangle.h"
+#include "Mesh.h"
 #include "Scene.h"
 #include "Renderer.h"
 

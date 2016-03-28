@@ -6,11 +6,13 @@ AABB AABB::Union(AABB &b, glm::vec3 &p)
 	float minx = glm::min(b.pMin.x, p.x);
 	float miny = glm::min(b.pMin.y, p.y);
 	float minz = glm::min(b.pMin.z, p.z);
-	ret.SetPMin(glm::vec3(minx, miny, minz));
+    vec3 tempPmin(minx, miny, minz);
+	ret.SetPMin(tempPmin);
 	float maxx = glm::max(b.pMax.x, p.x);
 	float maxy = glm::max(b.pMax.y, p.y);
 	float maxz = glm::max(b.pMax.z, p.z);
-	ret.SetPMax(glm::vec3(maxx, maxy, maxz));
+    vec3 tempPmax(maxx, maxy, maxz);
+	ret.SetPMax(tempPmax);
 	return ret;
 
 }
@@ -21,11 +23,13 @@ AABB AABB::Union(AABB &b, AABB &b2)
 	float minx = glm::min(b.pMin.x, b2.pMin.x);
 	float miny = glm::min(b.pMin.y, b2.pMin.y);
 	float minz = glm::min(b.pMin.z, b2.pMin.z);
-	ret.SetPMin(glm::vec3(minx, miny, minz));
+    vec3 tempPmin(minx, miny, minz);
+	ret.SetPMin(tempPmin);
 	float maxx = glm::max(b.pMax.x, b2.pMax.x);
 	float maxy = glm::max(b.pMax.y, b2.pMax.y);
 	float maxz = glm::max(b.pMax.z, b2.pMax.z);
-	ret.SetPMax(glm::vec3(maxx, maxy, maxz));
+    vec3 tempPmax(maxx, maxy, maxz);
+	ret.SetPMax(tempPmax);
 	return ret;
 
 }
