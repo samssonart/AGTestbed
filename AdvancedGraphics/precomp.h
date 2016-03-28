@@ -14,9 +14,6 @@
 #include <iostream>
 #include <fstream>
 #include <stdio.h>
-
-using namespace std;				
-
 #include <vector>
 #include <memory>
 #include <ppl.h>
@@ -27,4 +24,13 @@ using namespace std;
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
+using namespace std;
 using namespace glm;
+using namespace sf;
+
+#include "RenderObject.h"
+#include "AABB.h"
+#include "Triangle.h"
+#include "Scene.h"
+#include "Renderer.h"
+
