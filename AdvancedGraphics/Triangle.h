@@ -20,12 +20,12 @@ public:
 
 	virtual glm::vec3 NormalAtSurfacePoint(const glm::vec3 &p);
 	virtual bool Intersection(Ray &ray);
-	virtual glm::vec3 GetOrigin() const { return normal; }
+	glm::vec3 GetOrigin() const { return normal; }
 	virtual  Color GetColor() { return mat.GetColor(); }
-	virtual Material GetMaterial() const { return mat; }
-	virtual void SetOrigin(glm::vec3 p) { distance = glm::length(p); };
+	Material GetMaterial() const { return mat; }
+	void SetOrigin(glm::vec3 p) { distance = glm::length(p); };
 	void ComputeNormal();
-	virtual AABB ComputeBB();
-	virtual void UpdateBB();
-	virtual AABB GetBB() { return bounds; }
+	AABB ComputeBB();
+	void UpdateBB();
+	AABB GetBB() { return bounds; }
 };

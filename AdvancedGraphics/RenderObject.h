@@ -60,9 +60,8 @@ public:
 	RenderObject();
 	RenderObject(Material& newMaterial);
 
-	virtual int Intersect(const vec3& origin, const vec3& direction, vec3& hitPosition, vec2& UVCoordinates) = 0;
-	virtual const vec3 &getNormal(const vec3 &point) = 0;
-	virtual const vec3 &getNormal() = 0;
+	virtual bool Intersection(Ray &ray) = 0;
+	virtual glm::vec3 NormalAtSurfacePoint(const glm::vec3 &p) = 0;
 
 	void setTransform(const Transform& newTransform);
 	Transform&  getTransform();
