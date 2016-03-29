@@ -16,6 +16,8 @@
 #endif
 #include <ios>
 #include <iostream>
+#include <sstream>
+#include <iomanip>
 #include <fstream>
 #include <stdio.h>
 #include <vector>
